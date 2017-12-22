@@ -1,95 +1,106 @@
-<?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "Демонстрационная версия продукта «1С-Битрикс: Управление сайтом»");
-$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
-$APPLICATION->SetTitle("Каталог товаров из 1C:Предприятие");
-?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 
-<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"",
-	Array(
-		"IBLOCK_TYPE" => "xmlcatalog",
-		"IBLOCK_ID" => "8",
-		"SECTION_ID" =>"",
-		"SECTION_URL" => "/e-store/xml_catalog/#SECTION_ID#/",
-		"COUNT_ELEMENTS" => "Y",
-		"DISPLAY_PANEL" => "N",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "3600"
-	)
-);?>
-<hr />
+    <!-- Banner -->
+    <section id="banner">
+        <header>
+            <h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
+            <a href="#" class="button">Learn More</a>
+        </header>
+    </section>
 
-<?$APPLICATION->IncludeComponent("bitrix:catalog.top", ".default", Array(
-	"IBLOCK_TYPE"	=>	"xmlcatalog",
-	"IBLOCK_ID"	=>	"8",
-	"ELEMENT_SORT_FIELD"	=>	"sort",
-	"ELEMENT_SORT_ORDER"	=>	"asc",
-	"ELEMENT_COUNT"	=>	"3",
-	"LINE_ELEMENT_COUNT"	=>	"1",
-	"PROPERTY_CODE"	=>	array(
-		1	=>	"CML2_ARTICLE",
-		2	=>	"CML2_BASE_UNIT",
-		3	=>	"CML2_TRAITS",
-		4	=>	"CML2_ATTRIBUTES",
-		5	=>	"CML2_BAR_CODE",
-	),
-	"SECTION_URL"	=>	"/e-store/xml_catalog/#SECTION_ID#/",
-	"DETAIL_URL"	=>	"/e-store/xml_catalog/#SECTION_ID#/#ELEMENT_ID#/",
-	"BASKET_URL"	=>	"/personal/cart/",
-	"ACTION_VARIABLE"	=>	"action",
-	"PRODUCT_ID_VARIABLE"	=>	"id",
-	"SECTION_ID_VARIABLE"	=>	"SECTION_ID",
-	"CACHE_TYPE"	=>	"A",
-	"CACHE_TIME"	=>	"3600",
-	"DISPLAY_COMPARE"	=>	"N",
-	"PRICE_CODE"	=>	array(
-		0	=>	"Розничная",
-	),
-	"USE_PRICE_COUNT"	=>	"N",
-	"SHOW_PRICE_COUNT"	=>	"1"
-	)
-);?>
+    <!-- Highlights -->
+    <section class="wrapper style1">
+        <div class="container">
+            <div class="row 200%">
+                <section class="4u 12u(narrower)">
+                    <div class="box highlight">
+                        <i class="icon major fa-paper-plane"></i>
+                        <h3>This Is Important</h3>
+                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                    </div>
+                </section>
+                <section class="4u 12u(narrower)">
+                    <div class="box highlight">
+                        <i class="icon major fa-pencil"></i>
+                        <h3>Also Important</h3>
+                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                    </div>
+                </section>
+                <section class="4u 12u(narrower)">
+                    <div class="box highlight">
+                        <i class="icon major fa-wrench"></i>
+                        <h3>Probably Important</h3>
+                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
 
-<h2>Видео-новости</h2>
+    <!-- Gigantic Heading -->
+    <section class="wrapper style2">
+        <div class="container">
+            <header class="major">
+                <h2>A gigantic heading you can use for whatever</h2>
+                <p>With a much smaller subtitle hanging out just below it</p>
+            </header>
+        </div>
+    </section>
 
-<?$APPLICATION->IncludeComponent(
-	"bitrix:player",
-	"",
-	Array(
-		"PLAYER_TYPE" => "auto",
-		"USE_PLAYLIST" => "N",
-		"PATH" => "/upload/intro.flv",
-		"WIDTH" => "400",
-		"HEIGHT" => "324",
-		"FULLSCREEN" => "Y",
-		"SKIN_PATH" => "/bitrix/components/bitrix/player/mediaplayer/skins",
-		"SKIN" => "bitrix.swf",
-		"CONTROLBAR" => "bottom",
-		"WMODE" => "transparent",
-		"HIDE_MENU" => "N",
-		"SHOW_CONTROLS" => "Y",
-		"SHOW_STOP" => "N",
-		"SHOW_DIGITS" => "Y",
-		"CONTROLS_BGCOLOR" => "FFFFFF",
-		"CONTROLS_COLOR" => "000000",
-		"CONTROLS_OVER_COLOR" => "000000",
-		"SCREEN_COLOR" => "000000",
-		"WMODE_WMV" => "window",
-		"AUTOSTART" => "N",
-		"REPEAT" => "N",
-		"VOLUME" => "90",
-		"DISPLAY_CLICK" => "play",
-		"MUTE" => "N",
-		"HIGH_QUALITY" => "Y",
-		"ADVANCED_MODE_SETTINGS" => "N",
-		"BUFFER_LENGTH" => "10",
-		"DOWNLOAD_LINK_TARGET" => "_self"
-	),
-false
-);?>
+    <!-- Posts -->
+    <section class="wrapper style1">
+        <div class="container">
+            <div class="row">
+                <section class="6u 12u(narrower)">
+                    <div class="box post">
+                        <a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
+                        <div class="inner">
+                            <h3>The First Thing</h3>
+                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="6u 12u(narrower)">
+                    <div class="box post">
+                        <a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
+                        <div class="inner">
+                            <h3>The Second Thing</h3>
+                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="row">
+                <section class="6u 12u(narrower)">
+                    <div class="box post">
+                        <a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
+                        <div class="inner">
+                            <h3>The Third Thing</h3>
+                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="6u 12u(narrower)">
+                    <div class="box post">
+                        <a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
+                        <div class="inner">
+                            <h3>The Fourth Thing</h3>
+                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
 
-<!-- --><!-- -->
+    <!-- CTA -->
+    <section id="cta" class="wrapper style3">
+        <div class="container">
+            <header>
+                <h2>Are you ready to continue your quest?</h2>
+                <a href="#" class="button">Insert Coin</a>
+            </header>
+        </div>
+    </section>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
