@@ -36,12 +36,12 @@
 
         <?if($arResult["NAV_RESULT"]):?>
             <?if($arParams["DISPLAY_TOP_PAGER"]):?><?=$arResult["NAV_STRING"]?><br /><?endif;?>
-        <p><?echo $arResult["NAV_TEXT"];?></p>
+        <p><br><?echo $arResult["NAV_TEXT"];?></p>
 		<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?><br /><?=$arResult["NAV_STRING"]?><?endif;?>
         <?elseif(strlen($arResult["DETAIL_TEXT"])>0):?>
-             <p><?echo $arResult["DETAIL_TEXT"];?></p>
+             <p><br><?echo $arResult["DETAIL_TEXT"];?></p>
         <?else:?>
-             <p><?echo $arResult["PREVIEW_TEXT"];?></p>
+             <p><br><?echo $arResult["PREVIEW_TEXT"];?></p>
         <?endif?>
 
 
