@@ -8,8 +8,6 @@ $APPLICATION->SetTitle("Новости");
             <div class="row 200%">
                 <div class="8u 12u(narrower)">
                     <div id="content">
-
-                        <!-- Content -->
                         <? $APPLICATION->IncludeComponent(
                             "bitrix:news",
                             ".default",
@@ -142,5 +140,4 @@ $APPLICATION->SetTitle("Новости");
             </div>
         </div>
     </section>
-
-    <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
